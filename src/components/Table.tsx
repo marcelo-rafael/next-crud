@@ -9,9 +9,9 @@ export default function Table(props: TableProps) {
   function renderHeader() {
     return (
       <tr>
-        <th>Código</th>
-        <th>Nome</th>
-        <th>Idade</th>
+        <th className="text-left p-4">Código</th>
+        <th className="text-left p-4">Nome</th>
+        <th className="text-left p-4">Idade</th>
       </tr>
     )
   }
@@ -19,10 +19,12 @@ export default function Table(props: TableProps) {
   function renderData() {
     return props.clients?.map((client, index) => {
       return (
-        <tr key={client.id}>
-          <td>{client.id}</td>
-          <td>{client.name}</td>
-          <td>{client.age}</td>
+        <tr key={client.id}
+          className={`${index % 2 === 0 ? 'bg-purple-200' : 'bg-purple-100'}`}
+        >
+          <td className="text-left p-4">{client.id}</td>
+          <td className="text-left p-4">{client.name}</td>
+          <td className="text-left p-4">{client.age}</td>
         </tr>
       )
     })
@@ -30,9 +32,11 @@ export default function Table(props: TableProps) {
 
 
   return (
-    <table>
-      <thead>
-      {renderHeader()}
+    <table className="w-full rounded-xl overflow-hidden">
+      <thead className={`
+        text-gray-100 bg-gradient-to-r from-purple-500 to-purple-800
+      `}>
+        {renderHeader()}
       </thead>
       <tbody>
         {renderData()}
