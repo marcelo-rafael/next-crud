@@ -24,17 +24,20 @@ export default function Form(props: FormProps) {
           value={id} 
           className="mb-5" />
       ) : false}
+      
       <Input 
         text="nome" 
         value={name}  
         onChange={setName}  
         className="mb-5" />
+
       <Input 
         text="Idade" 
         type="number" 
         value={age}  
         onChange={setAge} />
       <div className="flex justify-end mt-7">
+
         <Button 
           cor="blue" 
           className="mr-2"
