@@ -29,7 +29,7 @@
  Next-CRUD 🚀
 </h4>
 
-<p align="center"><a href="https://next-crud.vercel.app/">Deploy on Vercel</a></p>
+<p align="center"><a href="https://simple-next-crud.vercel.app/">Deploy on Vercel</a></p>
 
 ---
 
